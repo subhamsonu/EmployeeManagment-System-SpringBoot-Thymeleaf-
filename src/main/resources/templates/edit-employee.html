@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Update Employee</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	
+</head>
+<body>
+
+    <div class="container my-3">
+     <h1>Add Employee</h1>
+      <div class="card">
+        <div class="card-body">
+           <div class="form-group col-md-8">
+             <form action="" th:action="@{/saveEmployee}" th:object="${employee}" method="post">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                       <label for="id" class="col-frm-label"> <b> Id   </b></label>
+                       <input type="number" class="form-control" placeholder="Employee's Id" th:field="*{id}">
+                  </div>
+                  
+                   <div class="form-group col-md-6">
+                       <label for="name" class="col-frm-label"> <b> Name</b></label>
+                       <input type="text" class="form-control" placeholder="Employee's Name" th:field="*{name}">
+                   </div>
+                   
+                   
+                      <div class="form-group col-md-6">
+                        <label for="Email" class="col-frm-label"> <b> E-mail</b></label>
+                        <input type="text" class="form-control" placeholder="Employee's E-mail" th:field="*{mail}">
+                      </div>
+                   
+                     <div class="form-group col-md-6">
+                         <label for="salary" class="col-frm-label"> <b> Salary</b></label>
+                         <input type="number" class="form-control" placeholder="Employee's Salary" th:field="*{salary}">
+                     </div>
+                     
+                          <div class="form-group col-md-3">
+                             <input type="submit" class="btn btn-primary" value="Update">
+                          </div>
+               
+                </div>
+             </form>
+           </div>
+        </div>
+      </div>
+  </div>
+	
+</body>
+</html>
